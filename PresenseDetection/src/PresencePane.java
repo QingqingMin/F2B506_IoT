@@ -58,19 +58,19 @@ public class PresencePane extends JPanel{
 	}
 	
 	////////////////////////////////////////////////
-	//	LightDevice
+	//	PresenceDevice
 	////////////////////////////////////////////////
 	
-	private PresenceDevice lightDev = null;
+	private PresenceDevice PresenceDev = null;
 	
 	public void setDevice(PresenceDevice dev)
 	{
-		lightDev = dev;
+		PresenceDev = dev;
 	}
 	
 	public PresenceDevice getDevice()
 	{
-		return lightDev;
+		return PresenceDev;
 	}
 	
 	////////////////////////////////////////////////
