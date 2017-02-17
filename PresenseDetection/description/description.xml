@@ -1,0 +1,36 @@
+<?xml version="1.0" ?> 
+<root xmlns="urn:schemas-upnp-org:device-1-0">
+	<specVersion>
+		<major>1</major> 
+		<minor>0</minor> 
+	</specVersion>
+	<device>
+		<deviceType>urn:schemas-upnp-org:device:presence:1</deviceType>
+		<friendlyName>Presence Detection</friendlyName>
+		<modelDescription>Presence Detection</modelDescription>
+		<modelName>Presence</modelName>
+		<modelNumber>1.0</modelNumber> 
+		<modelURL>http://www.cybergarage.org</modelURL> 
+		<serialNumber>1234567890</serialNumber> 
+		<UDN>uuid:cyberlinkPresenceDetection</UDN>
+		<UPC>123456789012</UPC> 
+		<iconList>
+			<icon>
+				<mimetype>image/png</mimetype>
+				<width>21</width>
+				<height>23</height>
+				<url>icon.png</url>
+			</icon>
+		</iconList>
+		<serviceList>
+			<service>
+				<serviceType>urn:schemas-upnp-org:service:power:1</serviceType> 
+				<serviceId>urn:schemas-upnp-org:serviceId:power:1</serviceId> 
+				<SCPDURL>/service/power/description.xml</SCPDURL> 
+				<controlURL>/service/power/control</controlURL> 
+				<eventSubURL>/service/power/eventSub</eventSubURL> 
+			</service>
+		</serviceList>
+		<presentationURL>http://www.cybergarage.org</presentationURL> 
+	</device>
+</root>
