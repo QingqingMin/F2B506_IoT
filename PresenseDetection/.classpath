@@ -2,9 +2,11 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-	<classpathentry kind="lib" path="/Users/MelissaMIN/Desktop/F2B506/IOT/lib/clink170.jar"/>
-	<classpathentry kind="lib" path="/Users/MelissaMIN/Desktop/F2B506/IOT/lib/clink210.jar"/>
-	<classpathentry kind="lib" path="/Users/MelissaMIN/Desktop/F2B506/IOT/lib/xercesSamples.jar"/>
-	<classpathentry kind="lib" path="/Users/MelissaMIN/Desktop/F2B506/IOT/lib/xpp3-1.1.4c.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Sheng Lin/Desktop/xerces2-9/clink170.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Sheng Lin/Desktop/xerces2-9/resolver.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Sheng Lin/Desktop/xerces2-9/serializer.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Sheng Lin/Desktop/xerces2-9/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Sheng Lin/Desktop/xerces2-9/xercesSamples.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Sheng Lin/Desktop/xerces2-9/xml-apis.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
