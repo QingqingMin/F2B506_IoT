@@ -35,15 +35,6 @@
 		<stateVariable sendEvents="yes">
 			<name>Power</name>
 			<dataType>boolean</dataType>
-			<allowedValueList>
-				<allowedValue>0</allowedValue>
-				<allowedValue>1</allowedValue>
-			</allowedValueList>
-			<allowedValueRange>
-				<maximum>123</maximum>
-				<minimum>19</minimum>
-				<step>1</step>
-			</allowedValueRange>
 		</stateVariable>
 		<stateVariable sendEvents="no">
 			<name>Result</name>
