@@ -31,8 +31,8 @@
 				<eventSubURL>/service/power/eventSub</eventSubURL> 
 			</service>
             <service>
-                <serviceType>urn:schemas-upnp-org:service:presence:1</serviceType>
-                <serviceId>urn:schemas-upnp-org:serviceId:presence:1</serviceId>
+                <serviceType>urn:schemas-upnp-org:service:presence:2</serviceType>
+                <serviceId>urn:schemas-upnp-org:serviceId:presence:2</serviceId>
                 <SCPDURL>/service/presence/description.xml</SCPDURL>
                 <controlURL>/service/presence/control</controlURL>
                 <eventSubURL>/service/presence/eventSub</eventSubURL>

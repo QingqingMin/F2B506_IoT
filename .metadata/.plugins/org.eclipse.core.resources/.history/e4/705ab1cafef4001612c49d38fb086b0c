@@ -33,7 +33,7 @@ public class PresenceDevice extends Device implements ActionListener, QueryListe
 
 		powerVar = getStateVariable("Power");
 		presenceVar = getStateVariable("Presence");
-		
+
 		Argument powerArg = getPowerAction.getArgument("Power");
 		StateVariable powerState = powerArg.getRelatedStateVariable();
 		AllowedValueList allowList = powerState.getAllowedValueList();
@@ -55,16 +55,8 @@ public class PresenceDevice extends Device implements ActionListener, QueryListe
 		System.out.println("maximum = " + allowRange_2.getMaximum());
 		System.out.println("minimum = " + allowRange_2.getMinimum());
 		System.out.println("step = " + allowRange_2.getStep());
-
 	}
 
-	////////////////////////////////////////////////
-	//	Affichage
-	////////////////////////////////////////////////
-	public void afficherInfo(){
-		
-	}
-	
 	////////////////////////////////////////////////
 	//	Component
 	////////////////////////////////////////////////
@@ -161,9 +153,9 @@ public class PresenceDevice extends Device implements ActionListener, QueryListe
 		}
 	}
 	
-	public String getPresenceState()
+	public String getPowerState()
 	{
-		if (presenceFlag == true)
+		if (onFlag == true)
 			return "1";
 		return "0";
 	}
@@ -193,21 +185,6 @@ public class PresenceDevice extends Device implements ActionListener, QueryListe
 			resultArg.setValue(state);
 			ret = true;
 		}
-		if (actionName.equals("GetPresence") == true) {
-			String state = getPresenceState();
-			Argument presenceArg = action.getArgument("Presence");
-			presenceArg.setValue(state);
-			ret = true;
-		}
-		if (actionName.equals("SetPresence") == true) {
-			Argument presenceArg = action.getArgument("Presence");
-			String state = presenceArg.getValue();
-			setPresenceState(state);
-			state = getPresenceState();
-			Argument resultArg = action.getArgument("Result");
-			resultArg.setValue(state);
-			ret = true;
-		}
 
 		comp.repaint();
 
@@ -221,7 +198,6 @@ public class PresenceDevice extends Device implements ActionListener, QueryListe
 	public boolean queryControlReceived(StateVariable stateVar)
 	{
 		stateVar.setValue(getPowerState());
-		stateVar.setValue(getPresenceState());
 		return true;
 	}
 
