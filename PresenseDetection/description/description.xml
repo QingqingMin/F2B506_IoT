@@ -30,7 +30,14 @@
 				<controlURL>/service/power/control</controlURL> 
 				<eventSubURL>/service/power/eventSub</eventSubURL> 
 			</service>
-		</serviceList>
+            <service>
+                <serviceType>urn:schemas-upnp-org:service:presence:1</serviceType>
+                <serviceId>urn:schemas-upnp-org:serviceId:presence:1</serviceId>
+                <SCPDURL>/service/presence/description.xml</SCPDURL>
+                <controlURL>/service/presence/control</controlURL>
+                <eventSubURL>/service/presence/eventSub</eventSubURL>
+            </service>
+        </serviceList>
 		<presentationURL>http://www.cybergarage.org</presentationURL> 
 	</device>
 </root>
