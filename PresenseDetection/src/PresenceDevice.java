@@ -28,6 +28,8 @@ public class PresenceDevice extends Device implements ActionListener, QueryListe
 		setPowerAction.setActionListener(this);
 		
 		ServiceList serviceList = getServiceList();
+		afficherService(serviceList);
+		
 		Service service = serviceList.getService(0);
 		service.setQueryListener(this);
 
@@ -37,31 +39,40 @@ public class PresenceDevice extends Device implements ActionListener, QueryListe
 		Argument powerArg = getPowerAction.getArgument("Power");
 		StateVariable powerState = powerArg.getRelatedStateVariable();
 		AllowedValueList allowList = powerState.getAllowedValueList();
-		for (int n=0; n<allowList.size(); n++) 
-			System.out.println("[" + n + "] = " + allowList.getAllowedValue(n));
+//		for (int n=0; n<allowList.size(); n++) 
+//			System.out.println("[" + n + "] = " + allowList.getAllowedValue(n));
 			
 		AllowedValueRange allowRange = powerState.getAllowedValueRange();
-		System.out.println("maximum = " + allowRange.getMaximum());
-		System.out.println("minimum = " + allowRange.getMinimum());
-		System.out.println("step = " + allowRange.getStep());
+//		System.out.println("maximum = " + allowRange.getMaximum());
+//		System.out.println("minimum = " + allowRange.getMinimum());
+//		System.out.println("step = " + allowRange.getStep());
 		
 		Argument presenceArg = getPresenceAction.getArgument("Presence");
 		StateVariable presenceState = presenceArg.getRelatedStateVariable();
 		AllowedValueList allowList_2 = presenceState.getAllowedValueList();
-		for (int n=0; n<allowList_2.size(); n++) 
-			System.out.println("[" + n + "] = " + allowList_2.getAllowedValue(n));
+//		for (int n=0; n<allowList_2.size(); n++) 
+//			System.out.println("[" + n + "] = " + allowList_2.getAllowedValue(n));
 			
 		AllowedValueRange allowRange_2 = presenceState.getAllowedValueRange();
-		System.out.println("maximum = " + allowRange_2.getMaximum());
-		System.out.println("minimum = " + allowRange_2.getMinimum());
-		System.out.println("step = " + allowRange_2.getStep());
+//		System.out.println("maximum = " + allowRange_2.getMaximum());
+//		System.out.println("minimum = " + allowRange_2.getMinimum());
+//		System.out.println("step = " + allowRange_2.getStep());
 
 	}
 
 	////////////////////////////////////////////////
 	//	Affichage
 	////////////////////////////////////////////////
-	public void afficherInfo(){
+	public void afficherService(ServiceList serviceList){
+		for (int n=0; n<serviceList.size(); n++){
+			Service sev = serviceList.getService(n);
+			System.out.println("[ Service " + n + "] = " + sev);
+			ActionList actList = sev.getActionList();
+			for (int i=0; i<actList.size(); i++)
+				System.out.println("[ Action " + i + "] = " + actList.getAction(i).getName());
+		}
+			
+			
 		
 	}
 	
